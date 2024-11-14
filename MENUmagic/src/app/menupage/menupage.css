@@ -1,0 +1,371 @@
+.body-menu {
+    /* Linear Gradient with pastel colors */
+    background: linear-gradient(135deg,rgba(255, 255, 187, 0.8), rgba(255, 254, 238, 0.8), rgba(255, 255, 215, 0.8));
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    animation: gradientAnimation 10s ease infinite;
+}
+
+/* Animation เพื่อให้ gradient ดูมีการเคลื่อนไหว */
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+#hero2 {
+    padding: 30px;
+}
+
+#hero2 .type-of-menu-page,
+.filter-grid2 {
+    margin-left: 80px;
+}
+
+.type-of-menu-page {
+    font-size: 30px;
+    font-weight: bold;
+    margin: 2% 0% auto 5%;
+    /*top, right, bottom, left) */
+}
+
+/* เส้นแบ่ง */
+.container-of-menu-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* เส้นแบ่ง */
+.line-of-menu-page {
+    width: 90%;
+    height: 3px;
+    background-color: black;
+    border: none;
+    margin: 10px auto;
+
+}
+
+/*--------------------------------------------------------------
+#category and addmenu button 
+--------------------------------------------------------------*/
+
+.category2,
+#addMenu2 {
+    border: 1px black;
+    padding: 10px 20px;
+    text-align: center;
+    border-radius: 10px;
+    font-size: 22px;
+    margin-right: 10px;
+    margin-top: 10px;
+    background-color: #FF86B4;
+    width: 155px;
+    height: auto;
+}
+
+.category2:hover {
+    color: white;
+    /* สีข้อความเมื่อกด */
+}
+
+/*--------------------------------------------------------------
+#Search and AddMenu button
+--------------------------------------------------------------*/
+.form-search2 {
+    width: 160px;
+    height: auto;
+    border: 2px solid black;
+    padding: 1px 0 0 20px;
+    font-size: 20px;
+    margin-left: 100px;
+    margin-right: 30px;
+    font-size: 22px;
+}
+
+#menu-gard2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, max(300px));
+    justify-content: center;
+    gap: 50px;
+    margin-top: 70px;
+    font-size: 20px;
+}
+
+.menus2 {
+    background-color: #fff7bb;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 30px 50px rgba(0, 0, 0, .2);
+    margin: auto;
+    max-width: 300px;
+}
+
+.menus img2 {
+    width: 70%;
+    border-radius: 8px;
+}
+
+/* ไม่พบรายการเมนูสำหรับผู้ใช้รายนี้ */
+.notify-page-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+    font-size: 22px;
+}
+
+/*--------------------------------------------------------------
+#Card
+--------------------------------------------------------------*/
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    /* ทำให้การ์ดยืดหยุ่น */
+    gap: 30px;
+    padding: 30px;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 50px;
+}
+
+.card {
+    background-color: #FFEDD5;
+    /* สีพาสเทล */
+    border-radius: 15px;
+    /* มุมที่โค้งมนมากขึ้น */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    /* เงาที่เด่นชัดขึ้น */
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s; /* เพิ่มการเคลื่อนไหว */
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    /* ยกการ์ดขึ้นเมื่อ hover */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+    /* เงาที่เด่นชัดเมื่อ hover */
+}
+
+.card-title {
+    font-size: 28px;
+    /* ขนาดตัวอักษรใหญ่ขึ้น */
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #4A4A4A;
+    /* เปลี่ยนสีตัวอักษรให้เข้มขึ้น */
+}
+
+.card-category {
+    font-size: 18px;
+    /* ขนาดตัวอักษรเล็กลงเล็กน้อย */
+    color: #4A4A4A;
+    margin-bottom: 15px;
+    background-color: #ffffff;
+    /* สีพื้นหลังที่สดใสขึ้น */
+    border-radius: 5px;
+    /* โค้งมน */
+    padding: 5px;
+    /* เพิ่ม padding */
+}
+
+.card-img {
+    border-radius: 15px;
+    /* โค้งมนมากขึ้น */
+    width: 100%;
+    /* ทำให้ขยายเต็มการ์ด */
+    height: auto;
+    /* รักษาสัดส่วน */
+}
+
+.delete-btn {
+    font-size: 30px;
+    background-color: #FF4C4C;
+    /* สีแดงที่พาสเทล */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-top: 15px;
+    /* แก้ไขตำแหน่งให้ชัดเจน */
+    margin-left: 200px;
+    padding: 0px 15px;
+    /* เพิ่ม padding */
+    cursor: pointer;
+    transition: background-color 0.3s;
+    /* เพิ่มการเปลี่ยนสีเมื่อ hover */
+}
+
+.delete-btn:hover {
+    background-color: #FF2D2D;
+    /* สีที่เข้มขึ้นเมื่อ hover */
+}
+
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    padding: 20px;
+    text-align: center;
+}
+
+.popup-content {
+    position: relative;
+}
+
+.popup-content h2,
+.popup-content button {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 10px;
+}
+
+
+/*==========================================================================================
+
+    Responsive
+
+=============================================================================================*/
+
+/*------------------ 
+desktop
+ ----------------*/
+@media (min-width: 1025px) {
+    .layout-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 0;
+    }
+
+    .parent-container,
+    .form-container2 {
+        margin: 0;
+    }
+
+    .form-container2 {
+        margin-right: 60px;
+    }
+
+    .form-search2 {
+        width: 250px;
+        height: 50px;
+    }
+
+    /* .filter-grid2,
+    .form-container2 {
+        display: flex;
+        align-items: center;
+    }
+
+    .form-container2 {
+        margin-top: 5px;
+    }*/
+}
+
+
+
+/*----------------
+ipad 
+-----------------*/
+
+
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .parent-container {
+        display: flex;
+        justify-content: center;
+    }
+
+    .filter-grid2 {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0;
+        margin-top: 15px;
+    }
+
+    .form-container2 {
+        display: inline-flex;
+        justify-content: center;
+        width: 95%;
+        margin-top: 5px;
+    }
+
+    .form-search2 {
+        width: 240px;
+        height: 50px;
+        margin-top: 20px;
+    }
+
+    #addMenu2 {
+        width: 137px;
+        height: 50px;
+        margin-top: 20px;
+    }
+
+
+}
+
+
+/*------------------------- 
+มือถือ 
+-----------------------------*/
+@media (max-width: 767px) {
+    .layout-container {
+        margin-right: 50px;
+    }
+
+    .parent-container {
+        display: flex;
+        justify-content: center;
+    }
+
+    .filter-grid2 {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0;
+        margin-top: 15px;
+    }
+
+    .form-container2 {
+        display: inline-flex;
+        justify-content: center;
+        width: 95%;
+        margin-top: 5px;
+    }
+
+    .form-search2 {
+        width: 150px;
+        height: 50px;
+        margin-top: 20px;
+    }
+
+    #addMenu2 {
+        width: 137px;
+        height: 50px;
+        margin-top: 20px;
+    }
+
+    .type-of-menu-page {
+        font-size: 20px;
+        margin-top: 30px;
+    }
+
+    b {
+        font-size: 18px;
+    }
+
+    .notify-page-menu {
+        font-size: 18px;
+    }
+}

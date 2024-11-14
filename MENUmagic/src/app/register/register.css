@@ -1,0 +1,203 @@
+.body-register {
+    margin: 0;
+    padding: 0;
+    background: url('/img/bg-login.jpg') center center / cover no-repeat fixed; /* รูปพื้นหลัง */ 
+    background-blend-mode: overlay;
+    background-color: rgba(0, 0, 0, 0.25); /* โปร่งใสเล็กน้อย */
+}
+
+header {
+    font-size: 25px;
+    color: black;
+    text-decoration: none;
+    background-color: #FF86B4;
+    /* bg nav */
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: flex-end;
+    /* จัดเรียงปุ่มไปทางขวา */
+    align-items: center;
+}
+
+.logo {
+    width: 300px;
+    height: auto;
+    padding-left: 50px;
+}
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #fffff5;
+}
+
+.logo-login {
+    width: 300px;
+    height: auto;
+    margin-bottom: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.nav-container button {
+    font-size: 25px;
+    padding: 9px 25px;
+    background-color: #FFFCAC;
+    border: none;
+    border-radius: 50px;
+    transition: all 0.3s ease 0s;
+}
+
+.nav-container button:hover {
+    background-color: #C4F8FF;
+}
+
+/*--------------------------------------------------------------
+#register-container
+--------------------------------------------------------------*/
+.form-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.login-container,
+.register-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 7px 7px 7px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+.register-form button[type="submit"] {
+    color: #ffffff;
+}
+
+.register-form button[type="button"]:hover {
+    color: #ffffff;
+}
+
+.register-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.register-form input[type="text2"],
+.register-form input[type="password"],
+.register-form input[type="email"] {
+    padding: 10px;
+    margin: 8px 0;
+    border: 2px solid #FF86B4;
+    border-radius: 4px;
+    font-size: 20px;
+}
+
+.register-form button {
+    background-color: #FF86B4;
+    color: rgb(0, 0, 0);
+    padding: 3px 40px 3px 40px;
+    /* top right bottom left */
+    margin: 15px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 25px;
+    border-radius: 25px;
+}
+
+.register-form button#google-login {
+    background-color: #ffffff;
+    border-radius: 25px;
+}
+
+.register-form button#google-login:hover {
+    color: black;
+    background-color: #C4F8FF;
+    border-radius: 25px;
+}
+
+
+/*
+    divider-container
+ */
+
+.divider-container {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.line {
+    height: 1px;
+    flex-grow: 1;
+    background: #000;
+}
+
+.text2 {
+    padding: 0 10px;
+    color: #000;
+    font-size: 20px;
+}
+
+
+
+
+
+/*
+    login-container
+ */
+
+/* .login {
+    margin-right: 30px;
+} */
+
+.register-container {
+    margin-top: 10px;
+}
+
+.register {
+    text-align: center;
+
+}
+
+.login span {
+    color: #555;
+}
+
+
+.text-login {
+    font-size: 25px;
+    color: black;
+}
+
+.text-login a {
+    padding-left: 5px;
+    color: #FF86B4;
+    ;
+    text-decoration: none;
+    font-size: 25px;
+}
+
+.text-login a:hover {
+    text-decoration: underline;
+}

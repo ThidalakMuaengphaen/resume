@@ -1,0 +1,337 @@
+.container-addmenu {
+    justify-content: center;
+    align-items: center;
+}
+
+/*--------------------------------------------------------------
+# Drop-Image
+--------------------------------------------------------------*/
+.dropimage-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px 0px 25px 0px;
+    /* top right bottom left */
+}
+
+.addmenu-h2 {
+    text-align: center;
+    padding-top: 50px;
+    margin-bottom: 50px;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+/* Drag or drop to upload photos. */
+.drag-area {
+    border: 2px dashed rgb(0, 0, 0);
+    border-radius: 50px;
+    height: 300px;
+    width: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    background-color: #fffff5; 
+    padding: 20px;
+
+}
+
+.drag-area::before {
+    content: '';
+    /* ต้องมี content เพื่อให้ pseudo-element ทำงาน */
+    position: absolute;
+    /* ใช้ตำแหน่งที่แน่นอน */
+    top: -35px;
+    /* ปรับตำแหน่งให้อยู่เหนือกรอบแรก */
+    left: -35px;
+    /* ปรับตำแหน่งให้อยู่ทางซ้ายของกรอบแรก */
+    right: -35px;
+    /* ปรับตำแหน่งให้อยู่ทางขวาของกรอบแรก */
+    bottom: -35px;
+    /* ปรับตำแหน่งให้อยู่ต่ำกว่ากรอบแรก */
+    border-radius: 50px;
+    background-color: #FF86B4; 
+    z-index: -1;
+    /* ให้กรอบที่สองอยู่ด้านหลังของกรอบแรก */
+
+
+}
+
+.drag-area.active {
+    border: 2px solid #fff;
+}
+
+.drag-area .icon {
+    font-size: 70px;
+    color: black;
+    /* color of icon */
+}
+
+.drag-area p {
+    font-size: 25px;
+    font-weight: bold;
+    color: black;
+    /* color of text-Drag or drop to upload photos. */
+    padding-top: 10px;
+}
+
+.drag-area span {
+    font-size: 22px;
+    font-weight: 500;
+    color: #000000;
+    margin: 10px 0 15px 0;
+}
+
+/* Select photo from device */
+.drag-area button {
+    padding: 10px 25px;
+    font-size: 25px;
+    font-weight: bold;
+    border: none;
+    outline: none;
+    background: #C4F8FF;
+    color: #000000;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.drag-area img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+
+/*--------------------------------------------------------------
+# Food filter form
+--------------------------------------------------------------*/
+
+.form-container{
+    width: 600px;
+    margin: 0 auto;
+    padding-top: 50px;
+}
+
+.form-field {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+label {
+    width: 150px;
+    /* Adjust the width as needed */
+    margin-right: 10px;
+    /* Space between the label and input */
+    font-size: 25px;
+    font-weight: bold;
+    text-align: right;
+    padding-right: 20px;
+}
+
+input[type="text"],
+select {
+    width: calc(100% - 180px);
+    /* Adjust width to account for label and padding */
+    padding: 10px;
+    border: 3px solid #FF86B4;
+    border-radius: 10px;
+    /* Optional: rounded corners for a consistent look */
+    font-size: 25px;
+    box-sizing: border-box;
+    background-color: #fffff5;
+    color: #000000;
+}
+
+select {
+    background-color: transparent;
+    cursor: pointer;
+    color: rgb(32, 32, 32);
+    border: 3px solid #FF86B4;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 25px;
+    background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="gray"%3E%3Cpath d="M7 10l5 5 5-5H7z"/%3E%3C/svg%3E');
+    /* SVG arrow */
+    background-repeat: no-repeat;
+    background-position: right 20px center;
+    /* Position of the arrow. */
+    background-size: 40px;
+    appearance: none;
+    /* Disable the browser's default arrow.*/
+}
+
+.select-form {
+    position: relative;
+    width: calc(100% - 180px);
+}
+
+select:focus,
+select:active,
+select option:checked {
+    color: black;
+    /* เปลี่ยนเป็นสีดำเมื่อเลือก */
+}
+
+/*--------------------------------------------------------------
+# Button OK & Cancel 
+--------------------------------------------------------------*/
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    padding-top: 20px;
+    color: #000;
+}
+
+.button-container a {
+    margin: 0 40px;
+}
+
+.button-container button {
+    width: 200px;
+    height: 60px;
+    font-size: 25px;
+    font-weight: 500;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-weight: bold;
+}
+
+.button-container button:hover {
+    background: #C4F8FF;
+}
+.ok {
+    background-color: rgba(0, 216, 144, 0.637) !important;
+}
+
+.cancel {
+    background-color: rgb(255, 166, 160) !important;
+}
+/* ================================================================
+
+    Responsive
+
+==================================================================*/
+@media (min-width: 768px) and (max-width: 1024px) {
+    .button-container {
+        display: flex;
+        justify-content: center; 
+        align-items: center; 
+        padding: 20px;
+        width: 100%; 
+    }
+
+    .button-container button {
+        width: 250px; 
+        height: 60px; 
+        font-size: 20px; 
+        text-align: center; 
+    }
+
+    .button-container a {
+        margin: 0 10px; 
+    }
+}
+
+
+
+
+
+
+
+
+
+/*------------------------- มือถือ----------------------- */
+@media (max-width: 767px) {
+ 
+    .container-addmenu {
+        padding: 10px;
+    }
+
+    .addmenu-h2 {
+        font-size: 20px;
+        padding-top: 20px;
+        margin-bottom: 30px;
+    }
+
+    .dropimage-container {
+        flex-direction: column; /* Change to column layout */
+        padding: 15px 0; /* Adjust padding */
+    }
+
+    .drag-area {
+        width: 80%; 
+        height: 200px;
+        padding: 5px; 
+        border-radius: 25px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .drag-area img {
+        max-width: 100%; 
+        height: auto;
+    }
+
+    .drag-area p {
+        font-size: 18px; /* ปรับขนาดฟอนต์ของข้อความให้เล็กลง */
+    }
+
+    .drag-area span {
+        font-size: 16px; /* ปรับขนาดฟอนต์ของ span ให้เล็กลง */
+    }
+
+    .drag-area button {
+        width: 75%; 
+        height: 40px; 
+        font-size: 18px;
+    }
+
+
+    .form-container {
+        width: 90%;
+        padding-top: 30px;
+    }
+
+    label {
+        width: auto; 
+        margin-right: 5px; 
+        font-size: 20px; 
+        padding-right: 10px; 
+    }
+
+    input[type="text"],
+    select {
+        width: 70%; /* calc(100% - 30px)  */
+        font-size: 20px; 
+    }
+
+
+    .button-container {
+        display: flex;
+        justify-content: center; 
+        align-items: center; 
+    }
+    
+    .button-container button { 
+        width: 100%; 
+        height: 50px; 
+        font-size: 20px;
+        text-align: center; 
+    }
+
+    .button-container a {
+        margin: 0 10px; 
+    }
+    .p-addmenu {
+        font-size: 8px;
+    }
+}
